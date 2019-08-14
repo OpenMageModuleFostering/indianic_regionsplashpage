@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <regionpage_adminhtml_regionpage_index>
+        <reference name="content">
+         <block type="core/template" template="regionpage/regionpagesteps.phtml"></block>
+            <block type="regionpage/adminhtml_regionpage" name="regionpage" >
+            
+            </block>
+        </reference>
+    </regionpage_adminhtml_regionpage_index>
+    
+     <adminhtml_cms_block_edit>
+        <reference name="content">
+            <block type="adminhtml/cms_block_edit" template="regionpage/regionpage.phtml" ></block>
+        </reference>
+    </adminhtml_cms_block_edit>
+</layout>

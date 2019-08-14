@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <managefields_adminhtml_managefields_index>
+        <reference name="content">
+          <block type="core/template" template="managefields/managefieldssteps.phtml"></block>
+            <block type="managefields/adminhtml_managefields" name="managefields" />
+        </reference>
+    </managefields_adminhtml_managefields_index>
+</layout>

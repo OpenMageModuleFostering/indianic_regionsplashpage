@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Indianic
+ * @package    Indianic_Regionpage
+ * @author     ModuleCreator
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Indianic_Regionpage>
+            <version>0.1.4</version>
+        </Indianic_Regionpage>
+    </modules>
+    <frontend>
+        <routers>
+            <regionpage>
+                <use>standard</use>
+                <args>
+                    <module>Indianic_Regionpage</module>
+                    <frontName>regionpage</frontName>
+                </args>
+            </regionpage>
+        </routers>
+        <layout>
+            <updates>
+                <regionpage>
+                    <file>regionpage.xml</file>
+                </regionpage>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<regionpage>
+				<use>admin</use>
+				<args>
+					<module>Indianic_Regionpage</module>
+					<frontName>regionpage</frontName>
+				</args>
+			</regionpage>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<regionpage module="regionpage">
+				<title>Regionpage</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="regionpage">
+						<title>Manage Region</title>
+						<sort_order>0</sort_order>
+						<action>regionpage/adminhtml_regionpage</action>                       
+					</items>
+                    <items1 module="regionpage">
+                        <title>Manage Content</title>
+                        <sort_order>1</sort_order>
+                        <action>regionpage/adminhtml_regionpage/cmscontent</action>                       
+                    </items1>
+				</children>
+			</regionpage>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Indianic_Regionpage>
+							<title>Regionpage Module</title>
+							<sort_order>10</sort_order>
+						</Indianic_Regionpage>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<regionpage>
+					<file>regionpage.xml</file>
+				</regionpage>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <regionpage>
+                <class>Indianic_Regionpage_Model</class>
+                <resourceModel>regionpage_mysql4</resourceModel>
+            </regionpage>
+            <regionpage_mysql4>
+                <class>Indianic_Regionpage_Model_Mysql4</class>
+                <entities>
+                    <regionpage>
+                        <table>regionpage</table>
+                    </regionpage>
+                </entities>
+            </regionpage_mysql4>
+        </models>
+        <resources>
+            <regionpage_setup>
+                <setup>
+                    <module>Indianic_Regionpage</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </regionpage_setup>
+            <regionpage_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </regionpage_write>
+            <regionpage_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </regionpage_read>
+        </resources>
+        <blocks>
+            <regionpage>
+                <class>Indianic_Regionpage_Block</class>
+            </regionpage>
+        </blocks>
+        <helpers>
+            <regionpage>
+                <class>Indianic_Regionpage_Helper</class>
+            </regionpage>
+        </helpers>
+    </global>
+</config>
