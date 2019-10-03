@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Indianic_Regionsplashpage",
+    "name": "OpenMageModuleFostering\/Indianic_Regionsplashpage",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "This module display region wise splash pages ",
     "authors": [
-    {
-        "name": "indianic",
-        "email": "enquiry@indianic.com"
-    }
-],
+        {
+            "name": "indianic",
+            "email": "enquiry@indianic.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
